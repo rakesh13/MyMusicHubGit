@@ -1,0 +1,7 @@
+musichub\demo\DAO\ProductDAOImpl.class
+musichub\demo\controllers\UserController.class
+musichub\demo\DAO\AdminService.class
+musichub\demo\DAO\ProductDAO.class
+musichub\demo\controllers\AdminController.class
+musichub\demo\DAO\ProductService.class
+musichub\demo\model\Product.class
