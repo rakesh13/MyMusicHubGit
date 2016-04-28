@@ -15,17 +15,51 @@
 
     <header class="business-header">
         <div class="container">
-            <div class="row">
+          <!--   <div class="row">
                 <div class="col-lg-12">
                     <h1 class="tagline">Let's Rock On with the feet of music</h1>
                 </div>
                 
             </div>
+           --> 
+           <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%;height: 30%">
+    <!-- Carousel indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+         <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>   
+    <!-- Wrapper for carousel items -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="<c:url value='/resources/images/guitar.jpg' />" height="30%" alt="First Slide">
+        </div>
+        <div class="item">
+            <img src="<c:url value='/resources/images/dafli.jpg'/>" height="30%" alt="Second Slide">
+        </div>
+        <div class="item">
+            <img src="<c:url value='/resources/images/violin.jpg'/>" height="30%" alt="Third Slide">
+        </div>
+        <div class="item">
+            <img src="<c:url value='/resources/images/accessories.jpg'/>" height="30%" alt="Third Slide">
+        </div>
+    
+    </div>
+    <!-- Carousel controls -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
            
         </div>
     </header>
 
     <!-- Page Content -->
+    <br><br><br>
     <div class="container">
 
         <hr>

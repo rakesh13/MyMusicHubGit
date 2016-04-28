@@ -18,6 +18,7 @@
 
 <http auto-config="true">
        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+       <intercept-url pattern="/users/**" access="hasRole('ROLE_USER')" />
        <form-login
            login-page="/login"
            default-target-url="/"
@@ -27,6 +28,9 @@
            password-parameter="password" />
        <csrf disabled="true"/>
        <logout
+       		logout-url="/perform_logout"
+       	    invalidate-session="true"
+       	    delete-cookies="true"
            logout-success-url="/login?logout" />
 </http>
 

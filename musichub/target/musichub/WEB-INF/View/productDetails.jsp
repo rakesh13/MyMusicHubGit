@@ -35,7 +35,7 @@
      </tbody>
  </table>
  </div>
- <form action="addtocart">
+ <form action="user/addCart?pid=${product.id}">
      <input type="submit" value="Add to Cart">
  </form>
 </div>

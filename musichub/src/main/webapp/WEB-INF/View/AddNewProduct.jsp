@@ -6,6 +6,9 @@
 <head>
 <jsp:include page="header.jsp" />
 <title>Product Registration</title>
+<style>
+  .error{color: red;font-weight: bold}
+</style>
 </head>
 <body>
 <br />
@@ -19,20 +22,25 @@
         <td><form:input path="id" /></td>
     </tr>
     <tr>
-        <td><label for="name">Name</label></td>
-        <td><form:input path="name" id="name" /></td>
+    	<td>Name</td>
+         <td><form:input path="name" id="name" /></td>
+         <td><form:errors path="name" cssClass="error">Name</form:errors></td>
     </tr>
     <tr>
-        <td><form:label path="category">Category</form:label></td>
+        <td>Category</td>
         <td><form:input path="category" /></td>
+        <td><form:errors path="category" cssClass="error"></form:errors></td>
+        
     </tr>
     <tr>
-        <td><form:label path="price">price</form:label></td>
+        <td>Price</td>
         <td><form:input path="price" /></td>
+        <td><form:errors path="price">price</form:errors></td>
     </tr>
      <tr>
-        <td><form:label path="description">Description</form:label></td>
-        <td><form:input path="description" /></td>
+        <td>Description</td>
+        <td><form:input path="description"/></td>
+        <td><form:errors path="description" cssClass="error"> </form:errors>
     </tr>
      <tr>
         <td><form:label path="image">Image</form:label></td>

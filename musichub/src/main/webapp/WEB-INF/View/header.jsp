@@ -55,28 +55,31 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><s:if
+				<s:if
 						test="${pageContext.request.userPrincipal.name != null}">
-						<h6>
-							Welcome : ${pageContext.request.userPrincipal.name} <a
-								href="javascript:formSubmit()"> Logout</a>
+							<li>Welcome : ${pageContext.request.userPrincipal.name} </li>
+							<li><a href="javascript:formSubmit()"> Logout</a></li>
 							<security:authentication var="user"
 								property="principal.authorities" />
 
 							<security:authorize var="loggedIn" access="isAuthenticated()">
-
+							
 								<security:authorize access="hasRole('ROLE_ADMIN')">
-									Admin
+								<li>	Admin </li>
 	        					</security:authorize>
 
 								<security:authorize access="hasRole('ROLE_USER')">
 									User
 	        					</security:authorize>
 							</security:authorize>
-						</h6>
+					
 					</s:if>
-				  <a href="login">Login</a> </li>
+					 
+					<s:if
+					    test="${pageContext.request.userPrincipal.name == null}">
+				<li> <a href="login">Login</a> </li></s:if> 
 				<li><a href="#">Sign Up</a></li>
+				
 				<li><a href="${pageContext.request.contextPath }/allproduct">All
 						Products</a></li>
 				<li></li>

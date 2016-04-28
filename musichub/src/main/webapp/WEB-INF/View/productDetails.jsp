@@ -35,8 +35,8 @@
      </tbody>
  </table>
  </div>
- <form action="addtocart">
-     <input type="submit" value="Add to Cart">
+ <form action="user/addCart?pid=${product.id}">
+     <input type="submit" value="Add to Cart" name="_eventId_addToCart" />
  </form>
 </div>
 </body>

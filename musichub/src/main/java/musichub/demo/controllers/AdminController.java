@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,8 +49,12 @@ public class AdminController
 	}
 	
 	@RequestMapping(value="/admin/addNewProduct",method=RequestMethod.POST)
-	public ModelAndView insertProduct(@ModelAttribute("insertProductCommand") Product p, HttpServletRequest request, BindingResult result)
+	public ModelAndView insertProduct(@Valid @ModelAttribute("insertProductCommand") Product p, HttpServletRequest request, BindingResult result)
 	{
+		if(result.hasErrors())
+		{
+			return new ModelAndView("/admin/addNewProduct","",null);
+		}
 		String filename=null;
 		int res = 0;
 		ServletContext context=request.getServletContext();
@@ -88,7 +93,8 @@ public class AdminController
 		}
 		else
 		{
-			return new ModelAndView("error","",null);
+			/*return new ModelAndView("error","",null);*/
+			return new ModelAndView("/admin/addNewProduct","",null);
 		}
 	}
 	

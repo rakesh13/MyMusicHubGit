@@ -11,7 +11,9 @@
        <param-value>
        				/WEB-INF/spring-dispatcher-servlet.xml,
                     /WEB-INF/applicationContext.xml,
-                    /WEB-INF/spring-security-config.xml
+                    /WEB-INF/spring-security-config.xml,
+                    /WEB-INF/cart-servlet-config.xml,
+                    /WEB-INF/cart-webflow-config.xml
        </param-value>   
    </context-param>
   <servlet>

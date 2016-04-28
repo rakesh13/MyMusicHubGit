@@ -7,7 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
 
+import org.hibernate.annotations.NotFound;
 import org.springframework.web.multipart.MultipartFile;
 
 
@@ -17,8 +19,14 @@ public class Product implements Serializable
 {
 	@Id
 	private int id;
+	
 	private int price;
-	private String name,description,category;
+   @NotNull
+	private String name;
+   @NotNull
+	String description;
+	@NotNull
+   String category;
 	
 	@Transient
 	private MultipartFile image;

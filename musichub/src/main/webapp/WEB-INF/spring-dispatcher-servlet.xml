@@ -23,6 +23,8 @@
   
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
  
+ 	<bean id="cartService" class="musichub.demo.Service.CartServiceImpl"/>
+ 	
    <mvc:resources location="/resources/" mapping="/resources/**" />
    
     <tx:annotation-driven/>

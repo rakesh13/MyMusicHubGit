@@ -1,7 +1,15 @@
 musichub\demo\DAO\ProductDAOImpl.class
-musichub\demo\controllers\UserController.class
+musichub\musichubService\service\CartServiceImpl.class
 musichub\demo\DAO\AdminService.class
 musichub\demo\DAO\ProductDAO.class
 musichub\demo\controllers\AdminController.class
+musichub\musichubService\configuration\MusicHubServiceInitializer.class
 musichub\demo\DAO\ProductService.class
+musichub\musichubService\controllers\MusicHubServiceController.class
+musichub\musichubService\configuration\MusicHubServiceConfiguration.class
+musichub\demo\controllers\UserController.class
+musichub\musichubService\DAO\CartDAO.class
+musichub\musichubService\service\CartService.class
 musichub\demo\model\Product.class
+musichub\musichubService\model\Cart.class
+musichub\musichubService\DAO\CartDAOImpl.class

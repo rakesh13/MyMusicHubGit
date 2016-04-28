@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+
+	<var name="cart"
+		class="musichub.demo.model.Cart" />
+		
+	<var name="product"
+		class="musichub.demo.model.Product" />
+
+	<!-- Display the login page -->
+	<view-state id="addProducts" view="/WEB-INF/views/ShoppingCart.jsp"
+		model="cart">
+		<transition on="addToCart" to="viewshopping" />
+	</view-state>
+
+	<action-state id="viewAllAction">
+		<evaluate expression="ProductService.getAllProduct()" />
+
+		<transition to="allproduct" />
+
+		<!-- <transition
+			on-exception="com.studytrails.tutorials.springwebflow.IncorrectLoginCredentialsException"
+			to="displayLoginErrorView" /> -->
+	</action-state>
+
+	<!-- <view-state id="displayLoginSuccessView" view="/WEB-INF/views/display_login_success.jsp" />
+
+	<view-state id="displayLoginErrorView" view="/WEB-INF/views/display_login_error.jsp" /> -->
+</flow>
